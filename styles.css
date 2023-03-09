@@ -1,0 +1,221 @@
+html,body
+{
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+}
+.flip-card {
+  background-color: transparent;
+  width: 50vw;
+  /* height: 200px; */
+  height: 50vh;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card.hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: rgb(255, 255, 255);
+  font-size: 200%;
+  vertical-align: top;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 200%;
+  vertical-align: top;
+}
+
+
+
+/* .row-1{
+    display: flex;
+    flex-direction: row;
+} */
+.top-row{
+  font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    /* justify-content: space-between; */
+    /* width: 100%; */
+}
+.bottom-row .flip-card{
+  width: 100vw;
+}
+
+#tools{
+  background-image: url("./images/tools.svg");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-color: rgb(61, 117, 139);
+}
+#tools h1, #guide h1{
+  background-color: rgb(61, 117, 139);
+  width: 33%;
+  margin: auto;
+  border: 2px solid rgb(61, 117, 139);
+  border-radius: 5px;
+}
+
+#guide{
+  background-image: url("./images/wcag2.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  /* background-color: rgb(61, 117, 139); */
+}
+#examples{
+  background-image: url("./images/examples.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e6e6e6;
+  color: #535356
+}
+
+#toolsBack, #guidesBack{
+  display: flex;
+  flex-direction: row;
+}
+
+#toolsBack .subTool, #guidesBack .guides{
+  width: 25%;
+  border: 5px solid black;
+  text-align: center;
+}
+
+/*BACK GROUND IMAGES*/
+#axe{
+  background-image: url("./images/axe-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #003349;
+}
+#axe a, #color a, #operable a, #understandable a{
+  color: #ffffff;
+}
+
+#wave{
+  background-image: url("./images/wave-back.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #ffffff;
+  
+}
+#wave a{
+  color: #4777b5;
+}
+
+#color{
+  background-image: url("./images/contrast-back.webp");
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  background-size: contain;
+  /* background-color: #ffffff; */
+}
+
+#reader{
+  background-image: url("./images/reader-back.png");
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: contain;
+  /* background-color: #ffffff; */
+}
+#reader a{
+  color: #000;
+}
+
+#perceivable{
+  background-image: url("./images/Percieveable.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #ffffff;
+}
+#perceivable a{
+  color: #005a6a;
+}
+
+#operable{
+  background-image: url("./images/operable.webp");
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: cover;
+  /* background-color: #79b0d7; */
+  color: #ffffff;
+}
+
+#understandable{
+  background-image: url("./images/understandable.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: #000c15; */
+}
+
+#robust{
+  background-image: url("./images/indoor-ramp.jpg");
+  background-size: cover;
+  background-position: 50%;
+}
+#robust a{
+  color: #232723;
+}
+
+/*//////////////////////////////////////////////////////////*/
+a {
+  text-decoration: none;
+}
+
+#previews{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+#previews .showcase{
+  width: 50vw;
+  flex-grow: 1;
+}
+
+#poem{
+  background-color: #cac3ad;
+  font-style: italic;
+  color: #e0dbca;
+}
+.showcase img{
+  width: 100%;
+  height: 100%;
+}
